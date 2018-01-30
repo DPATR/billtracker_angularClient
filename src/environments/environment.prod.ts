@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiServer: 'http://localhost:4741'
+  apiServer: 'https://cryptic-headland-52960.herokuapp.icom'
 };
