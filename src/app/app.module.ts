@@ -4,9 +4,13 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { AuthService } from './services/auth/auth.service';
-import { NavbarComponent } from './navbar/navbar.component'
+import { AppRoutingModule } from './app-routing.module';
+import { AuthComponent } from './auth/auth.component';
+import { AuthModule } from './auth/auth.module';
+import { AuthRoutingModule } from './auth/auth-routing.module';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthService } from './auth/auth.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

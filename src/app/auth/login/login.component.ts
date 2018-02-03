@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth/auth.service'
-
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,9 +17,15 @@ export class LoginComponent implements OnInit {
   // Not bound to multiple inputs, no object needed
   oldPassword: string
   newPassword: string
-  constructor(private auth: AuthService) { }
+  constructor(
+    private auth: AuthService,
+    public router: Router
+  ) { }
 
   ngOnInit() {
+    // if (localStorage.getItem('token')) {
+    //   this.router.navigate(['home'])
+    // }
   }
 
   signOut() {

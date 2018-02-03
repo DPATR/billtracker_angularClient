@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>Sign Up</h3>
+  <input [(ngModel)]="newUser.email" id="email-sign" name="email" type="text" placeholder="Username" required/>
+  <input [(ngModel)]="newUser.password" id="password-sign" name="password" type="text" placeholder="Password" required/>
+  <input [(ngModel)]="newUser.password_confirmation" id="password-confirm-sign" name="confirm_password" type="text" placeholder="Confirm Password" required/>
+  <input (click)="signUp()" type="submit" value="Sign Up"/>
+</div>
+
+
+<div class="container">
+  <h3>Sign In</h3>
+  <input [(ngModel)]="user.email" id="email-log" name="email" type="text" placeholder="Username" required/>
+  <input [(ngModel)]="user.password" id="password-log" name="password" type="text" placeholder="Password" required/>
+  <input (click)="signIn()" type="submit" value="Log in"/>
+</div>
+
+<div class="container">
+  <h3>Change Password</h3>
+  <input [(ngModel)]="oldPassword" id="old" name="oldPassword" type="text" placeholder="Old Password" required/>
+  <input [(ngModel)]="newPassword" id="new" name="newPassword" type="text" placeholder="New Password" required/>
+  <input (click)="changePassword()" type="submit" value="Change"/>
+
+</div>
+
+<div class="container">
+  <h3>Log Out</h3>
+  <input (click)="signOut()" type="submit" value="Sign Out"/>
+</div>
+
+<div *ngIf="auth.user" class="container">I see a user!!! <strong>{{auth.user.email}}</strong></div>
