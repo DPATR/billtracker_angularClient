@@ -194,4 +194,11 @@ export class AuthService {
         newField.value = ''
       }
     }
+
+    // removeMessage() {
+    //   this.changePasswordFailure = false
+    //   this.changePasswordSuccess = false
+    //   this.signOutFailure = false
+    // }
+
   }

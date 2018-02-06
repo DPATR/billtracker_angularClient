@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'
 
 import { LoginComponent } from './login/login.component';
-import { ChangePasswordComponent } from './change-password/change-password.component';
+// import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   imports: [
@@ -13,8 +13,8 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     RouterModule
   ],
   declarations: [
-    LoginComponent,
-    ChangePasswordComponent
+    LoginComponent
+    // ChangePasswordComponent
   ]
 })
 export class AuthModule { }

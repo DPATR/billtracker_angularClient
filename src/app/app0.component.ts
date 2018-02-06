@@ -15,12 +15,12 @@ export class AppComponent {
     private router: Router
   ) { }
 
-  signOut() {
-    this.auth.signOut()
-  }
-
-  ngOnInit() {
-    this.auth.setStatus()
-  }
+  // signOut() {
+  //   this.auth.signOut()
+  // }
+  //
+  // ngOnInit() {
+  //   this.auth.setStatus()
+  // }
 
 }

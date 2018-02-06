@@ -15,17 +15,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent,
-    //LoginComponent,
+    LoginComponent,
     NavbarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    AuthModule,
-    AuthRoutingModule
+    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
