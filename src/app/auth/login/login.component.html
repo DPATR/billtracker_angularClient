@@ -1,5 +1,5 @@
 <div style="text-align:center">
-  <h3>Welcome to Bill Tracker!  Please sign in or sign up to get started!</h3>
+  <h3>Welcome to Bill Tracker!  Please <i>Sign In</i> or <i>Sign Up</i> to get started!</h3>
 </div>
 <br>
 <div id="container">
@@ -16,12 +16,12 @@
           <h5>Please try again. You need to either Sign Up as a system user or you have entered incorrect information.</h5>
         </div>
         <h1>Sign In</h1>
-        <label for="email">Username:</label><br>
+        <label class="userlabel" for="email">Username:</label><br>
         <input [(ngModel)]="user.email" id="email-log" name="email" type="text" placeholder="Username" required/><br><br/>
-        <label for="password">Password:</label><br>
+        <label class="pswdlabel" for="password">Password:</label><br>
         <input [(ngModel)]="user.password" id="password-log" name="password" type="text" placeholder="Password" required/><br><br/>
         <p class="signin button">
-          <input (click)="signIn()" type="submit" value="Sign in"/>
+          <input (click)="signIn()" type="submit" value="Submit"/>
         </p>
         <div class="lower">
           <a href="#toregister">Not a member yet? Sign Up!</a>
@@ -43,7 +43,7 @@
         <label for="confirm_password">Confirm Password:</label><br>
         <input [(ngModel)]="newUser.password_confirmation" id="password-confirm-sign" name="confirm_password" type="text" placeholder="Confirm Password" required/><br><br/>
         <p class="signup button">
-        <input (click)="signUp()" type="submit" value="Sign Up"/>
+        <input (click)="signUp()" type="submit" value="Submit"/>
         </p>
         <div class="lower">
           <a href="#tosignin">Already a member? Sign In!</a>

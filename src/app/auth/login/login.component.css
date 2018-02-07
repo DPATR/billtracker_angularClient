@@ -19,6 +19,10 @@ h3 {
   color: red;
 }
 
+.userlabel, .pswdlabel {
+  color: rgb(6, 106, 117)
+}
+
 #register,
 #signin {
   position: absolute;
@@ -48,11 +52,13 @@ h3 {
 
 /**** general text styling ****/
 #wrapper h1{
-	font-size: 48px;
-	/* color: rgb(6, 106, 117); */
-  color: rgb(103, 87, 87);
+	font-size: 52px;
+  /* color: rgb(103, 87, 87); */
+  /* color: rgb(6, 106, 117); */
+  color: rgb(0, 128, 128);
 	padding: 2px 0 10px 0;
 	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+  /* font-family: Metric,Arial,Helvetica,sans-serif; */
 	font-weight: bold;
 	text-align: center;
 	padding-bottom: 30px;
@@ -119,9 +125,12 @@ input {
 #wrapper p.button input{
 	width: 30%;
 	cursor: pointer;
-	background: rgb(61, 157, 179);
+	/* background: rgb(61, 157, 179); */
+  /* background: rgb(6, 106, 117); */
+  background: rgb(0, 128, 128);
 	padding: 8px 5px;
 	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+  /* font-family: Metric,Arial,Helvetica,sans-serif; */
 	color: #fff;
 	font-size: 24px;
 	border: 1px solid rgb(28, 108, 122);
@@ -159,7 +168,8 @@ p.signup.button{
 	width: 100%;
 	padding: 17px 30px 20px 30px;
 	font-size: 16px	;
-	text-align: right;
+	/* text-align: right; */
+  text-align: center;
 	border-top: 1px solid rgb(219, 229, 232);
 	border-radius: 0 0  5px 5px;
 	background: rgb(225, 234, 235);
@@ -177,7 +187,8 @@ p.signup.button{
 	font-weight: bold;
 	background: rgb(247, 248, 241);
 	padding: 2px 6px;
-	color: rgb(29, 162, 193);
+	/* color: rgb(29, 162, 193); */
+  color: rgb(0, 128, 128);
 	margin-left: 10px;
 	text-decoration: none;
 	border-radius: 4px;

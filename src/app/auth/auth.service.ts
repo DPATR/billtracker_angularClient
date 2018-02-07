@@ -142,6 +142,7 @@ export class AuthService {
           localStorage.clear()
           this.setStatus()
           this.signOutFailure = false
+          this.router.navigate(['/'])
         },
         //err => console.log(err)
         err => {

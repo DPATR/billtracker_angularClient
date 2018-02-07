@@ -2,7 +2,8 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <div class="navbar-brand"><span class="glyphicon glyphicon-piggy-bank"></span>Bill Tracker
+      <!-- <div class="navbar-brand"><span class="glyphicon glyphicon-piggy-bank"></span>Bill Tracker -->
+      <div class="navbar-brand"><span class="glyphicon glyphicon-usd"></span> Bill Tracker
       </div>
       <button *ngIf="auth.loggedIn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Menu Options</span>
@@ -14,10 +15,9 @@
     <div *ngIf="auth.loggedIn" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-left">
         <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><a class="nav-link" routerLink="/home">Home</a></li>
-        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><a class="nav-link" routerLink="/budget">My Budget</a></li>
-        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><a class="nav-link" routerLink="/expenses">My Expenses</a></li>
+        <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><a class="nav-link" routerLink="/budget">My Bill Tracker</a></li>
         <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><a class="nav-link" routerLink="/auth/change-password">Change Password</a></li>
-        <li><a><input class="btn-warning" (click)="signOut()" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" type="submit" value="Log Out"/></a></li>
+        <li><a><input class="btn-warning" (click)="signOut()" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" type="submit" value="Sign Out"/></a></li>
       </ul>
     </div>
   </div>
