@@ -1,4 +1,5 @@
-import { Injectable, isDevMode } from '@angular/core';
+// import { Injectable, isDevMode } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { Http } from '@angular/http';
@@ -45,7 +46,7 @@ export class AuthService {
     const emailField = <HTMLInputElement>document.getElementById('email-log')
     const passwordField = <HTMLInputElement>document.getElementById('password-log')
     // Create the credentials object.
-    let credentials = {
+    const credentials = {
       'credentials': {
         'email': email,
         'password': password

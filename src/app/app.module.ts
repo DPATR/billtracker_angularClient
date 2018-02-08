@@ -12,6 +12,11 @@ import { LoginComponent } from './auth/login/login.component';
 import { AuthService } from './auth/auth.service';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { BillModule } from './bill/bill.module';
+import { BillRoutingModule } from './bill/bill-routing.module';
+import { BillService } from './bill/bill.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +30,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpModule,
     AppRoutingModule,
     AuthModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    BillModule,
+    BillRoutingModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, BillService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

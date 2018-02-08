@@ -4,11 +4,24 @@ import { RouterModule, Routes} from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { ChangePasswordComponent } from './auth/change-password/change-password.component';
 
+import { BillComponent } from './bill/bill.component';
+import { BillIndexComponent } from './bill/bill-index/bill-index.component';
+
 
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent
+  },
+  {
+    path: 'bill',
+    component: BillComponent,
+    children: [
+      {
+        path: '',
+        component: BillIndexComponent
+      }
+    ]
   },
   {
     path: 'auth/change-password',

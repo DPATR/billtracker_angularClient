@@ -1,0 +1,43 @@
+<!-- <p>
+  bill-index works!
+</p> -->
+<div id="container">
+  <!-- See Budget Box -->
+  <div id="wrapper">
+    <!-- See Budget Form -->
+    <div id="see-bills">
+      <!-- <div id="back">
+        <a routerLink="/home" class="back">Go Back</a>
+        <br>
+      </div> -->
+      <form>
+        <h1>Bill Tracker</h1>
+
+        <a class="btn" routerLink="/bills/new">Create Bill</a>
+
+        <div *ngIf="allBills.length === 0" class="msg">
+          <h4>You have no bills to display. Create a new bill to get started.</h4>
+        </div>
+
+        <div class="expenses" id="expenses-table">
+          <table *ngIf="allBills.length > 0">
+            <tr>
+              <th>Creditor</th>
+              <th>Billing Month</th>
+              <th>Amount Due</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+            <tr *ngFor="let bill of allBills">
+              <td>{{bill.creditor}}</td>
+              <td>{{bill.billing_month}}</td>
+              <td>${{bill.amount_due}}</td>
+              <td><a routerLink="/bill/edit/{{bill.id}}"><span class="glyphicon glyphicon-edit"></span></a></td>
+              <td><a (click)="deleteBill(bill)"><span class="glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div><!--/ see-bills-->
+  </div><!--/ wrapper-->
+</div><!--/ container-->
