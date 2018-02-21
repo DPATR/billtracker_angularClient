@@ -72,7 +72,7 @@ export class AuthService {
             this.setStatus()
             emailField.value = ''
             passwordField.value = ''
-            //this.router.navigate(['/home/'])
+            this.router.navigate(['/bill/'])
         },
         err => {
           this.loginFailure = true

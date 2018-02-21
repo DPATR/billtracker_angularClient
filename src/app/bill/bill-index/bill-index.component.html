@@ -12,14 +12,11 @@
       </div> -->
       <form>
         <h1>Bill Tracker</h1>
-
-        <a class="btn" routerLink="/bills/new">Create Bill</a>
-
         <div *ngIf="allBills.length === 0" class="msg">
           <h4>You have no bills to display. Create a new bill to get started.</h4>
         </div>
 
-        <div class="expenses" id="expenses-table">
+        <div class="bills" id="bills-table">
           <table *ngIf="allBills.length > 0">
             <tr>
               <th>Creditor</th>
@@ -36,7 +33,12 @@
               <td><a (click)="deleteBill(bill)"><span class="glyphicon glyphicon-trash"></span></a></td>
             </tr>
           </table>
-        </div>
+          <br>
+          <br>
+          <div id ="new">
+              <a class="btn" routerLink="/bill/new" class="btn btn-primary">Create A New Bill</a>
+          </div>
+        </div><!--/ bills-->
       </form>
     </div><!--/ see-bills-->
   </div><!--/ wrapper-->

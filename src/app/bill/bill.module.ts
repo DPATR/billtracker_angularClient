@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 
 import { BillComponent } from './bill.component';
 import { BillIndexComponent } from './bill-index/bill-index.component';
+import { BillNewComponent } from './bill-new/bill-new.component';
+import { BillEditComponent } from './bill-edit/bill-edit.component';
+import { BillService } from './bill.service';
 
 @NgModule({
   imports: [
@@ -12,6 +15,7 @@ import { BillIndexComponent } from './bill-index/bill-index.component';
     RouterModule,
     FormsModule
   ],
-  declarations: [BillComponent, BillIndexComponent]
+  declarations: [BillComponent, BillIndexComponent, BillNewComponent, BillEditComponent],
+  providers: [BillService]
 })
 export class BillModule { }

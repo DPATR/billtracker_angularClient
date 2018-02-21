@@ -6,7 +6,8 @@ import { ChangePasswordComponent } from './auth/change-password/change-password.
 
 import { BillComponent } from './bill/bill.component';
 import { BillIndexComponent } from './bill/bill-index/bill-index.component';
-
+import { BillNewComponent } from './bill/bill-new/bill-new.component';
+import { BillEditComponent } from './bill/bill-edit/bill-edit.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,14 @@ const routes: Routes = [
       {
         path: '',
         component: BillIndexComponent
+      },
+      {
+        path: 'new',
+        component: BillNewComponent
+      },
+      {
+        path: 'edit/:id',
+        component: BillEditComponent
       }
     ]
   },

@@ -1,0 +1,32 @@
+<!-- <p>
+  bill-new works!
+</p> -->
+<div id="container">
+  <!-- Create Bill Box -->
+  <div id="wrapper">
+    <!-- Create Bill Form -->
+    <div id="add-bill">
+      <!-- <div id="back">
+        <a (click)="removeMessage()" routerLink="/expenses" class="back">Go Back</a>
+        <br>
+      </div> -->
+        <form (ngSubmit)="saveBill(newBill)" ngNativeValidate>
+          <div *ngIf="billService.createBillFailure" class="failure">
+            <h5>This new bill failed to be added.</h5>
+          </div>
+          <h1>New Bill</h1>
+          <label for="creditor">Creditor:</label>
+          <input name="creditor" [(ngModel)]="newBill.creditor" id="new-creditor" placeholder="Creditor Name" size="20" required/><br>
+          <label for="billing_month">Billing Month:</label>
+          <input name="billing_month" [(ngModel)]="newBill.billing_month" id="new-billing-month" size="20" maxlength="9" placeholder="Billing Month" required/><br>
+          <label for="amount_due">Amount Due: $</label>
+          <input name="amount_due" [(ngModel)]="newBill.amount_due" id="new-amount-due" size="20" maxlength="7" placeholder="" required/><br>
+          <br>
+          <br>
+          <p class="submit button">
+            <input type="submit" value="Add"/>
+          </p>
+        </form>
+      </div><!--/ create-bill-->
+    </div><!--/ wrapper-->
+  </div><!--/ container-->
