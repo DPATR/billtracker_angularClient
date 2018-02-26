@@ -1,0 +1,32 @@
+<!-- <p>
+  bill-edit works!
+</p> -->
+<div id="container">
+  <!-- Edit Bill Box -->
+  <div id="wrapper">
+    <!-- Edit Bill Form -->
+    <div id="edit-bill">
+      <!-- <div id="back">
+        <a (click)="removeMessage()" routerLink="/bill" class="back">Go Back</a>
+        <br>
+      </div> -->
+        <form (ngSubmit)="updateBill(updatedBill)" ngNativeValidate>
+          <div *ngIf="billService.updateBillFailure" class="failure">
+            <h5>This bill could not be updated.</h5>
+          </div>
+          <h1>Edit Bill</h1>
+          <label for="creditor">Creditor:</label>
+          <input name="creditor" [(ngModel)]="updatedBill.creditor" id="update-creditor" size="20" required/><br>
+          <label for="billing_month">Billing Month:</label>
+          <input name="billing_month" [(ngModel)]="updatedBill.billing_month" id="update-billing-month" size="20" maxlength="9" required/><br>
+          <label for="amount_due">Amount Due: $</label>
+          <input name="amount_due" [(ngModel)]="updatedBill.amount_due" id="update-amount-due" size="20" maxlength="7" required/><br>
+          <br>
+          <br>
+          <p class="submit button">
+            <input type="submit" value="Edit"/>
+          </p>
+        </form>
+      </div><!--/ edit-bill-->
+    </div><!--/ wrapper-->
+  </div><!--/ container-->

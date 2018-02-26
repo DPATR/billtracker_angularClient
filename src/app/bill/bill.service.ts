@@ -8,7 +8,8 @@ export class BillService {
 
   createBillFailure:  boolean;
   updateBillFailure:  boolean;
-  // deleteBillFailure:  boolean;
+  deleteBillFailure:  boolean;
+  deleteBillSuccess:  boolean;
 
   getAllBills() {
     let config = {}
@@ -20,6 +21,12 @@ export class BillService {
     let config = {}
     config['headers'] = { Authorization:'Token token=' + localStorage.getItem('token')}
     return this.http.get(environment.apiServer + '/bills/' + billId, config);
+  }
+
+  deleteBill(bill) {
+    let config = {}
+    config['headers'] = { Authorization:'Token token=' + localStorage.getItem('token')}
+    return this.http.delete(environment.apiServer + '/bills/' + bill.id, config)
   }
 
   saveBill(newBill) {

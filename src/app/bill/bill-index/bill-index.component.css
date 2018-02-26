@@ -1,3 +1,11 @@
+.success, .msg {
+  text-align: left;
+  color: green;
+}
+.failure {
+  text-align: left;
+  color: red;
+}
 .glyphicon-edit {
   color: #4e76f1;
 }

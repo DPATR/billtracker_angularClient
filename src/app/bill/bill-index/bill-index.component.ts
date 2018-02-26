@@ -27,4 +27,21 @@ export class BillIndexComponent implements OnInit {
       });
     }
   }
+
+  deleteBill(deletedBill) {
+    this.billService.deleteBill(deletedBill)
+    .subscribe(
+      response => {
+        let billIndex = this.allBills.indexOf(deletedBill);
+        this.allBills.splice(billIndex, 1);
+        this.billService.deleteBillSuccess = true
+        this.billService.deleteBillFailure = false
+      },
+      err => {
+        this.billService.deleteBillSuccess = false
+        this.billService.deleteBillFailure = true
+      }
+    );
+  }
+
 }

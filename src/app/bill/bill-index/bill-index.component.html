@@ -11,6 +11,12 @@
         <br>
       </div> -->
       <form>
+        <div *ngIf="billService.deleteBillSuccess" class="success">
+          <h5>The bill has successfully been deleted.</h5>
+        </div>
+        <div *ngIf="billService.deleteBillFailure" class="failure">
+          <h5>This bill could not be deleted.</h5>
+        </div>
         <h1>Bill Tracker</h1>
         <div *ngIf="allBills.length === 0" class="msg">
           <h4>You have no bills to display. Create a new bill to get started.</h4>
